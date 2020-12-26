@@ -62,7 +62,7 @@ def main():
     @check_the_date.before_loop
     async def before_check_the_date():
         for _ in range(60*60*24):  # loop the hole day
-            if datetime.datetime.now().hour == 22:  # 24 hour format
+            if datetime.datetime.now().hour == 9:  # 24 hour format
                 print('It is time')
                 return
             await asyncio.sleep(1)# wait a second before looping again. You can make it more 
