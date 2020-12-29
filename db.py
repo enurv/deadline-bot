@@ -17,7 +17,7 @@ def connect_to_database():
 
 def new_deadline(connection, name, date, link):
     try:
-        query = "INSERT INTO deadlines (name,date,link, reminded, finished) VALUES(%s, %s, %s, FALSE)"
+        query = "INSERT INTO deadlines (name,date,link, reminded) VALUES(%s, %s, %s, FALSE)"
         val = (name, date, link)
         
         cursor = connection.cursor()
